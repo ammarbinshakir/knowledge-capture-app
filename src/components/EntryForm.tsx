@@ -142,8 +142,8 @@ export default function EntryForm({
           Image {isEditing && '(optional)'}
         </label>
         <div className="flex items-center space-x-4">
-          {imagePreview && (
-            <div className="relative h-16 w-16 rounded-md overflow-hidden">
+          {imagePreview ? (
+            <div className="relative h-16 w-16 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-700">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={imagePreview}
@@ -155,6 +155,12 @@ export default function EntryForm({
                   setImagePreview('/images/placeholder.jpg');
                 }}
               />
+            </div>
+          ) : (
+            <div className="relative h-16 w-16 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-700 border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
+              <svg className="w-6 h-6 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
             </div>
           )}
           <input

@@ -1,103 +1,83 @@
-# Knowledge Capture App for Manufacturing Technicians
+# Knowledge Capture App
 
-A mobile-first knowledge capture interface for manufacturing technicians, built with Next.js, TypeScript, and Tailwind CSS.
+Mobile-first knowledge interface for manufacturing technicians. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- Responsive, mobile-first design for use on the manufacturing floor
-- CRUD operations for knowledge entries (Create, Read, Update, Delete)
-- Image upload capability
-- Modern UI with animations and transitions
+- Mobile-first responsive design
+- CRUD operations (Create, Read, Update, Delete)
+- Image upload with base64 persistence
+- Dark mode support
+- Real-time UI updates
 - End-to-end testing with Playwright
 
-## UI/UX Improvements
+## UX Enhancements
 
-### 1. Gesture-Based Controls for Mobile
+**Loading & Feedback**
+- Skeleton loading animations
+- Hover effects with scaling and shadows
+- Button state feedback with icons
 
-To enhance the technician experience on the manufacturing floor, I've implemented a mobile-optimized interface with large touch targets and intuitive swipe gestures:
+**Empty State**
+- Animated elements with bounce effects
+- Gradient backgrounds with dashed borders
+- Contextual tips and clear call-to-action
 
-- Swipe right on an entry to reveal quick edit actions
-- Swipe left to access delete functionality
-- Pull down to refresh the entries list
-- Card-based layout that works well with gloves and in industrial environments
+**Mobile Touch Interface**
+- Large 44px+ touch targets for gloves
+- Enhanced buttons with icons and labels
+- Responsive spacing for all screen sizes
 
-### 2. Voice Input Support
+**Card Interactions**
+- Hover states with colored shadows
+- Smooth transitions and animations
+- Clear visual hierarchy for scanning
 
-Since technicians often have their hands full with tools or equipment, voice input capabilities have been added:
+## Quick Start
 
-- Speech-to-text for creating new entries
-- Voice commands for navigating the interface
-- Accessibility improvements for workers in noisy environments
+**Prerequisites:** Node.js 18+, npm, Git
 
-## Setup Instructions
-
-### Prerequisites
-
-- Node.js 18+ and npm
-- Git
-
-### Installation
-
-1. Clone the repository:
-
+**Install & Run:**
 ```bash
-git clone https://github.com/yourusername/knowledge-capture-app.git
+git clone https://github.com/ammarbinshakir/knowledge-capture-app.git
 cd knowledge-capture-app
-```
-
-2. Install dependencies:
-
-```bash
 npm install
-```
-
-3. Start both the Next.js app and the mock API server:
-
-```bash
 npm run dev:all
 ```
 
-This will start:
-- Next.js development server at [http://localhost:3000](http://localhost:3000)
-- JSON Server mock API at [http://localhost:3001](http://localhost:3001)
+**URLs:**
+- App: http://localhost:3000
+- API: http://localhost:3001
 
-### Running Tests
-
-To run the end-to-end tests with Playwright:
-
+**Testing:**
 ```bash
 npm test
 ```
 
 ## Tech Stack
 
-- **Frontend Framework**: Next.js with TypeScript
-- **Styling**: Tailwind CSS
-- **State Management**: React Hooks
-- **Mock API**: JSON Server
-- **Testing**: Playwright for end-to-end tests
-- **Deployment**: Ready for Vercel deployment
+- Next.js 15.5.4 + TypeScript + React 19
+- Tailwind CSS v4 + Dark Mode
+- json-server (Mock API)
+- Playwright (E2E Testing)
+- Vercel Ready
 
-## Project Structure
+## Structure
 
 ```
-knowledge-capture-app/
-├── src/
-│   ├── app/             # Next.js App Router
-│   ├── components/      # React components
-│   └── lib/             # Utility functions and API services
-├── public/              # Static assets
-├── tests/               # Playwright tests
-└── db.json              # Mock database for JSON Server
+src/app/        # Next.js App Router
+src/components/ # React components  
+src/lib/        # API & utilities
+tests/          # Playwright E2E tests
+db.json         # Mock database
 ```
 
-## Future Enhancements
+## Future Ideas
 
-- Offline support with PWA capabilities
-- Barcode/QR code scanning for equipment identification
-- Integration with existing manufacturing systems
-- Collaborative features for team knowledge sharing
-
-## License
-
-MIT
+- Voice input for hands-free entry creation
+- Speech-to-text for descriptions and titles
+- Voice commands for navigation and actions
+- PWA offline support
+- Barcode/QR scanning  
+- Manufacturing system integration
+- Team collaboration features
